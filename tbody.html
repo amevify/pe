@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./../css/tool-freme-style.css" />
     <link
       rel="stylesheet"
-      href="./../css/tools-css/stripe-fee-calculator.css"
+      href="./../css/tools-css/direct-link-generator.css"
     />
     <!--All css code end here-->
   </head>
@@ -26,7 +26,7 @@
       <div class="bg-4"></div>
       <div class="bg-5"></div>
     </div>
-    <nav class="sidebar close">
+    <nav class="sidebar">
       <div class="logo">
         <img
           src="./../assets/logo/logo.svg"
@@ -47,7 +47,7 @@
       </ul>
     </nav>
     <!-- main  -->
-    <main class="main full">
+    <main class="main">
       <div class="top-bar">
         <div class="manu-icon">
           <img src="./../assets/nav-icon/menu-2-line.svg" alt="menu icon" />
@@ -64,31 +64,10 @@
           </div>
           <i class="ri-close-line"></i>
         </section>
-        <section class="toolbody">
-          <div class="tool-container">
-            <!--Stripe Fee Calculator start-->
-            <div class="calculator">
-              <h2 class="tooltitle">Stripe Fee Calculator</h2>
-              <form id="form" onsubmit="calculateAmount(event);">
-                <input
-                  type="number"
-                  id="stripeFeeInput"
-                  placeholder="Enter Your Amount"
-                  autocomplete="off"
-                  class="calculator-input"
-                  required
-                />
-                <input type="submit" value="Calculate" id="CalculateBtn" />
-              </form>
-              <div id="result"></div>
-            </div>
-            <!--Stripe Fee Calculator end-->
-          </div>
-        </section>
+        <section class="toolbody"></section>
       </section>
     </main>
     <!-- js  -->
-    <script src="./../js/tools-js/stripe-fee-calculator.js"></script>
     <script src="./../js/tool-api.js"></script>
   </body>
 </html>

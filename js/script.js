@@ -1,32 +1,29 @@
-const body = document.querySelector("body"),
-      modeToggle = body.querySelector(".mode-toggle");
-      sidebar = body.querySelector("nav");
-      sidebarToggle = body.querySelector(".sidebar-toggle");
+const sidebar = document.querySelector(".sidebar"),
+main = document.querySelector(".main"),
+menuIcon = document.querySelector(".manu-icon img");
 
-let getMode = localStorage.getItem("mode");
-if(getMode && getMode ==="dark"){
-    body.classList.toggle("dark");
+menuIcon.onclick = () => {
+    sidebar.classList.toggle("close");
+    main.classList.toggle("full");
 }
 
-let getStatus = localStorage.getItem("status");
-if(getStatus && getStatus ==="close"){
-    sidebar.classList.toggle("close");
+
+// let cards = document.querySelector(".cards");
+let cards = document.getElementById("cards");
+for(let x in toolCardData) {
+    let cardParent = document.createElement("div");
+    
+    cardParent.innerHTML = `
+    <!-- card 1  -->
+    <a href="${toolCardData[x].url}">
+    <div class="card">
+      <img
+        src="${toolCardData[x].image}"
+        alt="${toolCardData[x].altData}"
+      />
+      <h2>${toolCardData[x].toolName}</h2>
+      </div>
+      </a>
+    `
+    cards.appendChild(cardParent);
 }
-
-modeToggle.addEventListener("click", () =>{
-    body.classList.toggle("dark");
-    if(body.classList.contains("dark")){
-        localStorage.setItem("mode", "dark");
-    }else{
-        localStorage.setItem("mode", "light");
-    }
-});
-
-sidebarToggle.addEventListener("click", () => {
-    sidebar.classList.toggle("close");
-    if(sidebar.classList.contains("close")){
-        localStorage.setItem("status", "close");
-    }else{
-        localStorage.setItem("status", "open");
-    }
-})

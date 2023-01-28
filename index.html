@@ -4,103 +4,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./Images/logo.svg" type="image/x-icon" />
-
-    <!----======== CSS ======== -->
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <!----===== remixicon CSS ===== -->
+    <title>Abtahi Hasan - tools</title>
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/logo/logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-
-    <title>Abtahi hasan</title>
   </head>
   <body>
-    <nav>
-      <a href="https://www.abtahihasan.com/">
-        <div class="logo-name">
-          <div class="logo-image">
-            <img src="images/logo.svg" alt="logo" />
-          </div>
-
-          <span class="logo_name">AbtahiHasan</span>
-        </div>
-      </a>
-
-      <div class="menu-items">
-        <ul class="nav-links">
-          <li>
-            <a href="#">
-              <i class="ri-home-7-line"></i>
-              <span class="link-name">Home</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="ri-file-info-line"></i>
-              <span class="link-name">About</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="ri-contacts-line"></i>
-              <span class="link-name">Contact</span>
-            </a>
-          </li>
-        </ul>
-
-        <ul class="logout-mode">
-          <li class="mode">
-            <a href="#">
-              <i class="uil uil-moon"></i>
-              <span class="link-name">Dark Mode</span>
-            </a>
-
-            <div class="mode-toggle">
-              <span class="switch"></span>
-            </div>
-          </li>
-        </ul>
+    <div class="bg">
+      <div class="bg-1"></div>
+      <div class="bg-2"></div>
+      <div class="bg-3"></div>
+      <div class="bg-4"></div>
+      <div class="bg-5"></div>
+    </div>
+    <nav class="sidebar">
+      <div class="logo">
+        <img
+          src="./assets/logo/logo.svg"
+          alt="Abtahi Hasan Logo"
+          class="logo-icon"
+        />
+        <h1 class="logo-text">abtahiHasan</h1>
       </div>
+      <ul class="navlinks">
+        <li>
+          <a href="#"
+            ><img src="./assets/nav-icon/home.svg" alt="" /><span>Home</span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./assets/nav-icon/privay-policy.svg" alt="" /><span
+              >Privacy Policy</span
+            ></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./assets/nav-icon/contact.svg" alt="" /><span
+              >Contact Us</span
+            ></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./assets/nav-icon/about.svg" alt="" /><span
+              >About Us</span
+            ></a
+          >
+        </li>
+      </ul>
     </nav>
-
-    <section class="dashboard">
-      <div class="top">
-        <i class="ri-bar-chart-horizontal-line sidebar-toggle"></i>
-        <div class="search-box">
-          <i class="ri-search-line"></i>
-          <input type="text" placeholder="Search here..." />
+    <!-- main  -->
+    <main class="main">
+      <div class="top-bar">
+        <div class="manu-icon">
+          <img src="./assets/nav-icon/menu-2-line.svg" alt="nenu icon" />
         </div>
       </div>
-
-      <div class="main-content">
-        <div class="overview">
-          <div class="boxes">
-            <a href="https://www.abtahihasan.com/direct-link-generator/">
-              <div class="box">
-                <img src="./Images/google-drive.svg" alt="stripe icon" />
-                <h2 class="text">Direct list genarator</h2>
-              </div>
-            </a>
-            <a href="https://www.abtahihasan.com/paypal-fee-calculator/">
-              <div class="box">
-                <img src="./Images/paypal.svg" alt="stripe icon" />
-                <h2 class="text">Paypal Fee Calculatro</h2>
-              </div>
-            </a>
-            <a href="https://www.abtahihasan.com/stripe-fee-calculator/">
-              <div class="box">
-                <img src="./Images/stripe.svg" alt="stripe icon" />
-                <h2 class="text">Stripe Fee Callculatro</h2>
-              </div>
-            </a>
+      <section class="main-content">
+        <section class="search">
+          <div class="search-box">
+            <input type="text" placeholder="Search here ..." /><i
+              class="ri-search-line"
+            ></i>
           </div>
-        </div>
-      </div>
-    </section>
-
+        </section>
+        <section id="cards-container"></section>
+        <!-- cards  -->
+        <section class="cards" id="cards"></section>
+      </section>
+    </main>
+    <!-- js  -->
+    <script src="./js/api.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
